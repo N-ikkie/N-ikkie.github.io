@@ -1,0 +1,1419 @@
+{
+  "name": "鲁曦",
+  "role": "AI 视频创意与制作",
+  "intro": "围绕游戏广告，把剧本、角色与场景、镜头、生成和后期连接起来。用 GPT / Codex 协作推进创作，也用白模、脚本与制作记录，把复杂画面拆成可控制的问题。",
+  "workflow": [
+    {
+      "phase": "前期准备",
+      "overview": "剧本 · 资产 · 分镜",
+      "steps": [
+        {
+          "title": "定方向，锁剧本",
+          "method": "从需求、参考和项目美术出发，确定卖点、剧情反转和结尾。用 GPT 配合编剧技能梳理动作、对白和节奏，先锁定故事与角色关系。",
+          "output": "锁定剧本、故事结构卡"
+        },
+        {
+          "title": "备资产，明确参考用途",
+          "method": "把人物、道具、场景拆成独立资产。用 GPT 配合图片提示词技能准备设定图，筛选后登记素材版本和 ID，标明每张图负责身份、构图还是质感。",
+          "output": "入选设定图、资产清单、参考顺序"
+        },
+        {
+          "title": "拆分镜，预演关键动作",
+          "method": "把锁定剧本交给导演技能和 GPT，逐镜安排景别、站位、视线与动作承接。遇到追弹、遮挡或落地等需要精确控制的镜头，用 Blender 白模先排机位和运动。",
+          "output": "文字分镜、视频提示词、必要时的白模"
+        }
+      ]
+    },
+    {
+      "phase": "样片与返修",
+      "overview": "480p 样片 · 审片 · 选片",
+      "steps": [
+        {
+          "title": "校验参考，生成样片",
+          "method": "用 Python 执行器核对提示词结构、参考顺序和素材引用，再提交 Seedance 480p 样片。执行器跟踪同一任务并下载候选。",
+          "output": "候选视频、生成规格、任务记录"
+        },
+        {
+          "title": "审片，定向返修和选片",
+          "method": "先看正常速度下的表演、节奏和声音，再抽查接触、遮挡和跨镜状态。用具体画面定位问题，只调整相关时间段和直接受影响的内容，确认后选定具体样片。",
+          "output": "问题与返修记录、入选版本"
+        }
+      ],
+      "feedback": "空间和动作问题回到分镜或白模，角色和外观问题回到参考资产，局部生成问题定向修改后重出样片。"
+    },
+    {
+      "phase": "转正与交付",
+      "overview": "1080p 转正 · 剪辑合成",
+      "steps": [
+        {
+          "title": "绑定入选样片，转 1080p",
+          "method": "把入选样片和对应任务绑定，直接转成 1080p。下载后核对分辨率、文件完整性和可读性，记录样片到正式片段的映射。",
+          "output": "1080p 片段、版本对应与技术检查记录"
+        },
+        {
+          "title": "剪辑合成，按画幅交付",
+          "method": "按片子需要用剪映、AE 或脚本完成剪接、透明 UI、音效与画幅适配。画面锁定后按节奏制作配乐候选，人工选曲和混音，再检查整片。",
+          "output": "成片、画幅版本、可复用的合成素材"
+        }
+      ]
+    }
+  ],
+  "films": [
+    {
+      "id": "vt-deer",
+      "title": "猎鹿人黄雀捕蝉",
+      "game": "VT",
+      "category": "AI-3D",
+      "date": "2026.11.10",
+      "duration": 44.095011,
+      "type": "第一人称狩猎 / 武器升级",
+      "summary": "从狩猎受挫、改装反馈到再次挑战，让玩法变化成为一条完整的观看线索。",
+      "description": "项目剪辑版包含林地狩猎、熊的近身威胁、失败重试、武器改装与再次狩猎。制作记录覆盖地形遮挡、第一人称持枪、追弹镜头、受击倒地和数值 UI。",
+      "highlights": [
+        "用地形与遮挡组织威胁的出现，控制第一人称观察关系。",
+        "把配件装配、属性变化、品阶反馈放在同一段改装节奏中。",
+        "同一项目分别保留白模、生成片段、透明 UI 和整合预览。"
+      ],
+      "chapters": [],
+      "poster": "media/vt-deer-6031240d6f.webp",
+      "video": "media/vt-deer-6031240d6f.mp4",
+      "caseId": "ui",
+      "note": "11 月 10 日竖屏导出版 · 新尾板。",
+      "width": 1080,
+      "height": 1920,
+      "prompt": {
+        "updated": "2026-11-06",
+        "parts": 3,
+        "url": "prompts/vt-deer.txt"
+      },
+      "section": "ai-3d"
+    },
+    {
+      "id": "vt-boar",
+      "title": "割草野猪",
+      "game": "VT",
+      "category": "AI-3D",
+      "date": "2026.11.10",
+      "duration": 53.962993,
+      "type": "剧情开场 / 机舱射击",
+      "summary": "牧场危机连接直升机射击，以武器与玩法变化延续动作节奏。",
+      "description": "从马厩危机到登机，再进入机舱射击与武器升级。更新后的整片包含目标提示、射击反馈和任务结算；项目还保留持枪与换弹白模、兽群路线和轮廓提示的专项制作记录。",
+      "highlights": [
+        "剧情中的威胁、登机与游戏视角形成连续目标。",
+        "枪械、机舱、手臂与动物资产分别维护参考版本。",
+        "后续以蒙版、光流与遮挡层级处理目标轮廓提示。"
+      ],
+      "chapters": [],
+      "poster": "media/vt-boar-44cea84bcb.webp",
+      "video": "media/vt-boar-44cea84bcb.mp4",
+      "caseId": "ui",
+      "note": "11 月 10 日竖屏导出版 · 新尾板。",
+      "width": 1080,
+      "height": 1920,
+      "prompt": {
+        "updated": "2026-11-05",
+        "parts": 6,
+        "url": "prompts/vt-boar.txt"
+      },
+      "section": "ai-3d"
+    },
+    {
+      "id": "w3-live",
+      "title": "谁在直播",
+      "game": "warline",
+      "category": "真人 Drama 买量",
+      "date": "2026.10.21",
+      "duration": 54.791667,
+      "type": "真人喜剧 / 游戏衔接",
+      "summary": "狙击手的笨拙操作与直播弹幕互相回应，把表演和画内信息放在一起设计。",
+      "description": "夜间城垛上的狙击手尝试架枪、瞄准与处理镜盖，直播信息随表演推进，随后进入游戏段落。制作记录包含道具透视、手部动作、视线、构图及弹幕后期。",
+      "highlights": [
+        "角色反应与道具状态共同制造喜剧信息。",
+        "镜盖、枪栓和持枪位置在逐镜设计中分别核对。",
+        "画内弹幕承担反馈，避免遮住关键表演区域。"
+      ],
+      "chapters": [],
+      "poster": "media/w3-live-13bda88ad8.webp",
+      "video": "media/w3-live-13bda88ad8.mp4",
+      "note": "10 月 21 日晚间正式导出版 · 新动画与弹幕遮挡修正。",
+      "width": 1080,
+      "height": 1920,
+      "prompt": {
+        "updated": "2026-10-21",
+        "parts": 2,
+        "url": "prompts/w3-live.txt"
+      },
+      "section": "drama"
+    },
+    {
+      "id": "w3-sniper",
+      "title": "二次狙击",
+      "game": "warline",
+      "category": "AI-3D",
+      "date": "2026.10.16",
+      "duration": 78.125,
+      "type": "多场景射击 / 白模预演",
+      "summary": "围绕首枪受阻与补射结果，推敲遮挡时序、镜内构图和追弹路径。",
+      "description": "不同场景围绕观察目标、射击受阻与再次击发展开。项目中把空间结构、美术外观和人物表演分别交给不同的参考与制作环节，再用生成结果检验。",
+      "highlights": [
+        "白模承担路线、遮挡、接触和摄影机时序。",
+        "环境资产与人物资产各自约束外观。",
+        "对照返修前后画面，检查局部修改是否牵动其他部分。"
+      ],
+      "chapters": [],
+      "poster": "media/w3-sniper.webp",
+      "video": "media/w3-sniper.mp4",
+      "caseId": "space",
+      "note": "展示项目剪辑版；过程案例不表示所有历史样片都已通过创作验收。",
+      "width": 1080,
+      "height": 1920,
+      "prompt": {
+        "updated": "2026-10-16",
+        "parts": 6,
+        "url": "prompts/w3-sniper.txt"
+      },
+      "section": "ai-3d"
+    },
+    {
+      "id": "pt-fall",
+      "title": "帕萌降落",
+      "game": "palmon survival",
+      "category": "真人 Drama 买量",
+      "date": "2026.10.15",
+      "duration": 54.25,
+      "type": "真人与奇幻角色 / UI 包装",
+      "summary": "高空落地与奇幻生物的尺度反差，连接后续游戏内容。",
+      "description": "人物与奇幻角色从高空进入地面场景，随后衔接游戏画面。制作中分别处理落地动作、角色身份、前后景尺度与宠物 UI，并制作带真实透明通道的动画素材。",
+      "highlights": [
+        "真人角色与奇幻生物保持同场光线与尺度关系。",
+        "落地作为独立返修点，核对动作起点与接地过程。",
+        "UI 动画另存透明 MOV / WebM，用深浅背景检查边缘。"
+      ],
+      "chapters": [],
+      "poster": "media/pt-fall.webp",
+      "video": "media/pt-fall.mp4",
+      "note": "下方过程素材为独立的 480p 透明动画样片。",
+      "width": 1080,
+      "height": 1920,
+      "prompt": {
+        "updated": "2026-10-14",
+        "parts": 1,
+        "url": "prompts/pt-fall.txt"
+      },
+      "section": "drama"
+    },
+    {
+      "id": "pt-camp",
+      "title": "营地建造",
+      "game": "palmon survival",
+      "category": "AI-3D",
+      "date": "2026.09.10",
+      "duration": 58.666667,
+      "type": "成长叙事 / HUD 与字幕",
+      "summary": "从荒地到家园，用阶段变化、角色劳动和 Day 数字建立成长感。",
+      "description": "项目围绕 Day 01 到 Day 100 的营地变化展开，并连接经营玩法。相关工程保留 Day HUD 数字滚动、字幕样式处理与制作流程探索记录。",
+      "highlights": [
+        "用可见建筑部件与具体工作动作描述成长。",
+        "通过 AE 脚本制作固定窗口内的 Day 数字滚动。",
+        "HUD 静态美术与数字动画分层，减少无关元素漂移。"
+      ],
+      "chapters": [],
+      "poster": "media/pt-camp.webp",
+      "video": "media/pt-camp.mp4",
+      "note": "展示剪辑结果；不把早期一镜到底试验写成已实现的稳定方法。",
+      "width": 1080,
+      "height": 1920,
+      "prompt": {
+        "updated": "2026-09-10",
+        "parts": 1,
+        "note": "营地建造的连续镜头提示词，不含后续玩法画面。",
+        "url": "prompts/pt-camp.txt"
+      },
+      "section": "ai-3d"
+    },
+    {
+      "id": "w3-casino",
+      "title": "赌场不准入",
+      "game": "warline",
+      "category": "真人 Drama 买量",
+      "date": "2026.09.22",
+      "duration": 58.677007,
+      "type": "真人喜剧 / 身份反差",
+      "summary": "以门前审核制造人物反差，再把游戏信息转化为喜剧的判断依据。",
+      "description": "门童与不同来客在赌场入口交锋，人物反应、战力话题和服装差异共同建立反转，随后接入游戏段落。",
+      "highlights": [
+        "同一入口空间建立重复的比较关系。",
+        "人物表情与反应近景承接喜剧节奏。",
+        "剧情信息为游戏段落提供明确的转入理由。"
+      ],
+      "chapters": [],
+      "poster": "media/w3-casino.webp",
+      "video": "media/w3-casino.mp4",
+      "note": "展示 9 月 22 日项目剪辑版。",
+      "width": 1080,
+      "height": 1920,
+      "prompt": {
+        "updated": "2026-09-22",
+        "parts": 1,
+        "url": "prompts/w3-casino.txt"
+      },
+      "section": "drama"
+    },
+    {
+      "id": "rok-kang",
+      "title": "又是拼炕",
+      "game": "万国觉醒",
+      "category": "AI 全自动化产出",
+      "date": "2026.11.11",
+      "type": "真人短剧 / 身份反差",
+      "summary": "从拼炕与独院的待遇反差，转入古代家园建造。",
+      "description": "古代驿站里，令牌与草帽成为分配住处的依据。拥挤的通铺和独院形成反差，人物争执接入后半段的AI 生成的家园建造与经营示意画面。",
+      "highlights": [
+        "用通铺与独院的空间差异呈现人物处境。",
+        "中国人物与中文对白，保持真人短剧的表演方式。",
+        "30 秒剧情开场衔接 25 秒AI 玩法示意段落，完成 55 秒整片。"
+      ],
+      "chapters": [
+        [
+          0,
+          "驿站入住与拼炕"
+        ],
+        [
+          30,
+          "AI 玩法示意"
+        ]
+      ],
+      "note": "11 月 11 日 1080p 整片 · AI 真人版。 本组由自动化制作流程产出，人工选定样片后转正交付。",
+      "video": "media/rok-kang-9242f8a633.mp4",
+      "poster": "media/rok-kang-9242f8a633.webp",
+      "duration": 55.0,
+      "width": 1920,
+      "height": 1080,
+      "prompt": {
+        "updated": "2026-11-11",
+        "parts": 2,
+        "url": "prompts/rok-kang.txt"
+      },
+      "section": "ai-automation"
+    },
+    {
+      "id": "rok-cilantro",
+      "title": "俺就一根香菜",
+      "game": "万国觉醒",
+      "category": "AI 全自动化产出",
+      "date": "2026.11.11",
+      "type": "美漫 Q 版 / 喜剧反转",
+      "summary": "一根香菜与一大盘肉，把待遇差异变成可见的笑点。",
+      "description": "军营饭桌前，巨型饭勺只换来一根香菜，镶金锄头却换来一大盘肉。用夸张的角色表情与道具对照推进冲突，随后进入AI 生成的家园建造和经营示意段落。",
+      "highlights": [
+        "美漫 Q 版人物、夸张比例与中文对白形成统一表现。",
+        "用饭勺、香菜、锄头和肉盘建立清晰的比较关系。",
+        "将 30 秒剧情开场与 25 秒AI 玩法示意段落合成完整广告。"
+      ],
+      "chapters": [
+        [
+          0,
+          "香菜与肉盘的待遇反差"
+        ],
+        [
+          30,
+          "AI 玩法示意"
+        ]
+      ],
+      "note": "11 月 11 日 1080p 整片 · 美漫 Q 版。 本组由自动化制作流程产出，人工选定样片后转正交付。",
+      "video": "media/rok-cilantro-c560326f94.mp4",
+      "poster": "media/rok-cilantro-c560326f94.webp",
+      "duration": 55.0,
+      "width": 1920,
+      "height": 1080,
+      "prompt": {
+        "updated": "2026-11-11",
+        "parts": 2,
+        "url": "prompts/rok-cilantro.txt"
+      },
+      "section": "ai-automation"
+    },
+    {
+      "id": "w3-curious",
+      "title": "猎奇射击",
+      "game": "warline",
+      "category": "AI-3D",
+      "date": "2026.11.11",
+      "type": "第一人称射击 / 目标与结算",
+      "summary": "通过游艇、潜入与泳池场景，把瞄准、逃脱和结算串成连续玩法。",
+      "description": "第一人称狙击视角串联游艇、仓库、火烈鸟浮具和泳池等场景。目标标签、追弹镜头、命中反馈与结果面板共同呈现每次射击的结果。",
+      "highlights": [
+        "以瞄准镜构图和目标状态引导观看重点。",
+        "将高价值目标提示、首枪反馈与结算时机分别控制。",
+        "多段正式视频结合界面、音效与配乐完成整片。"
+      ],
+      "chapters": [],
+      "note": "11 月 11 日项目导出版 · 约 51 秒完整剪辑。",
+      "video": "media/w3-curious-bf97c898e5.mp4",
+      "poster": "media/w3-curious-bf97c898e5.webp",
+      "duration": 51.222993,
+      "width": 1080,
+      "height": 1920,
+      "prompt": {
+        "updated": "2026-11-11",
+        "parts": 4,
+        "url": "prompts/w3-curious.txt"
+      },
+      "section": "ai-3d"
+    },
+    {
+      "id": "samo-cat-1",
+      "title": "异种族猫女评鉴指南",
+      "game": "SAMO",
+      "category": "真人 Drama 买量",
+      "date": "2026.10.27",
+      "type": "奇幻真人短剧 / 多结局",
+      "summary": "酒馆中的身份反差，延续为骷髅角色展示游戏的结局。",
+      "description": "猫女、骑士与不同种族的来客在酒馆中形成对照。时间跳转后，骷髅角色手持手机出现，故事接入升级与战斗演示。",
+      "highlights": [
+        "真人表演与猫女、蜥蜴人、骷髅等奇幻角色同场呈现。",
+        "以酒馆人物关系和时间跳转组织反转。",
+        "保留手机展示与后续玩法，作为独立完整结局收录。"
+      ],
+      "note": "10 月 27 日完整导出 · 手机展示版。",
+      "video": "media/samo-cat-1-f4df43e46b.mp4",
+      "poster": "media/samo-cat-1-f4df43e46b.webp",
+      "duration": 49.791667,
+      "width": 1080,
+      "height": 1920,
+      "chapters": [],
+      "prompt": {
+        "updated": "2026-10-27",
+        "parts": 3,
+        "url": "prompts/samo-cat-1.txt"
+      },
+      "section": "drama"
+    },
+    {
+      "id": "w3-borrow",
+      "title": "借刀杀人",
+      "game": "warline",
+      "category": "真人 Drama 买量",
+      "date": "2026.10.14",
+      "type": "真人喜剧 / 射击玩法",
+      "summary": "受困人物、武器与意外反应，连接狙击任务的游戏段落。",
+      "description": "开场围绕被绑的士兵与蒙面人物展开，人物表情、枪械动作和环境变化形成喜剧节奏，随后切入带有目标赏金的狙击玩法。",
+      "highlights": [
+        "人物近景与道具动作共同交代角色处境。",
+        "在受困、反应与射击画面之间维持明确的观看重点。",
+        "采用 10 月 14 日修改后的完整剪辑，保留游戏段落与结尾。"
+      ],
+      "note": "10 月 14 日修改版完整导出。",
+      "video": "media/w3-borrow-0b9225a18c.mp4",
+      "poster": "media/w3-borrow-0b9225a18c.webp",
+      "duration": 58.513991,
+      "width": 1080,
+      "height": 1920,
+      "chapters": [],
+      "prompt": {
+        "updated": "2026-10-13",
+        "parts": 2,
+        "url": "prompts/w3-borrow.txt"
+      },
+      "section": "drama"
+    },
+    {
+      "id": "pt-ring",
+      "title": "套圈游戏",
+      "game": "palmon survival",
+      "category": "真人 Drama 买量",
+      "date": "2026.10.14",
+      "type": "真人与奇幻角色 / 比较反转",
+      "summary": "把套圈结果、角色等级和奇幻伙伴联系起来，衔接捕捉玩法。",
+      "description": "广场上的套圈挑战以人物对抗和结果揭晓推进。角色等级与奇幻伙伴强化比较关系，后半段接入收集、捕捉和成长玩法。",
+      "highlights": [
+        "套圈道具、目标与围观人物共同建立挑战场景。",
+        "用人物反应与等级提示呈现结果反差。",
+        "剧情开场与游戏玩法连成一条完整广告。"
+      ],
+      "note": "10 月 14 日完整导出。",
+      "video": "media/pt-ring-a76619ec5c.mp4",
+      "poster": "media/pt-ring-a76619ec5c.webp",
+      "duration": 56.958333,
+      "width": 1080,
+      "height": 1920,
+      "chapters": [],
+      "prompt": {
+        "updated": "2026-10-14",
+        "parts": 3,
+        "url": "prompts/pt-ring.txt"
+      },
+      "section": "drama"
+    },
+    {
+      "id": "pt-underwear",
+      "title": "扔内衣",
+      "game": "palmon survival",
+      "date": "2026.06.29",
+      "category": "真人 Drama 买量",
+      "type": "真人剧情 / 游戏广告",
+      "summary": "擂台中的人物冲突与反应，衔接伙伴收集和成长玩法。",
+      "description": "擂台中的人物冲突与反应，衔接伙伴收集和成长玩法。",
+      "highlights": [
+        "人物处境、道具与角色反应组织开场。",
+        "保留剧情、玩法段落与对应片尾。"
+      ],
+      "note": "59 秒竖屏版。",
+      "chapters": [],
+      "video": "media/pt-underwear-a36695bdac.mp4",
+      "poster": "media/pt-underwear-a36695bdac.webp",
+      "duration": 58.772417,
+      "width": 1080,
+      "height": 1920,
+      "prompt": {
+        "updated": "2026-06-26",
+        "parts": 2,
+        "note": "道馆冲突与看台人物表演的提示词，不含后续玩法画面。",
+        "url": "prompts/pt-underwear.txt"
+      },
+      "section": "drama"
+    },
+    {
+      "id": "pt-grandma",
+      "title": "老智对战老奶",
+      "game": "palmon survival",
+      "date": "2026.07.03",
+      "category": "真人 Drama 买量",
+      "type": "真人剧情 / 游戏广告",
+      "summary": "老智与对手的伙伴展示形成强弱对照，随后衔接战斗玩法。",
+      "description": "老智与对手的伙伴展示形成强弱对照，随后衔接战斗玩法。",
+      "highlights": [
+        "人物近景与奇幻伙伴登场交替呈现。",
+        "保留剧情、玩法段落与对应片尾。"
+      ],
+      "note": "7 月 3 日竖屏新尾板版本。",
+      "chapters": [],
+      "video": "media/pt-grandma-f05f5ce2d5.mp4",
+      "poster": "media/pt-grandma-f05f5ce2d5.webp",
+      "duration": 35.071,
+      "width": 1080,
+      "height": 1920,
+      "section": "drama"
+    },
+    {
+      "id": "w3-airsoft",
+      "title": "第三人称 Airsoft",
+      "game": "warline",
+      "date": "2026.07.10",
+      "category": "真人 Drama 买量",
+      "type": "真人剧情 / 游戏广告",
+      "summary": "室内战术行动与人物口播相连，衔接第一人称射击演示。",
+      "description": "室内战术行动与人物口播相连，衔接第一人称射击演示。",
+      "highlights": [
+        "以室内人物行动建立开场，再由人物讲述连接玩法。",
+        "保留剧情、玩法段落与对应片尾。"
+      ],
+      "note": "7 月 10 日多尺寸交付中的原生竖屏版。",
+      "chapters": [],
+      "video": "media/w3-airsoft-4dceec9aef.mp4",
+      "poster": "media/w3-airsoft-4dceec9aef.webp",
+      "duration": 49.62,
+      "width": 1080,
+      "height": 1920,
+      "prompt": {
+        "updated": "2026-07-08",
+        "parts": 3,
+        "note": "三段真人剧情提示词，不含游戏实录画面。",
+        "url": "prompts/w3-airsoft.txt"
+      },
+      "section": "drama"
+    },
+    {
+      "id": "pt-muscle-short",
+      "title": "肌肉皮卡",
+      "game": "palmon survival",
+      "date": "2026.09.24",
+      "category": "真人 Drama 买量",
+      "type": "真人剧情 / 游戏广告",
+      "summary": "泳池边的人物与肌肉伙伴形成反差，接入收集和战斗玩法。",
+      "description": "泳池边的人物与肌肉伙伴形成反差，接入收集和战斗玩法。",
+      "highlights": [
+        "人物外形、等级提示与表情共同呈现强弱关系。",
+        "保留剧情、玩法段落与对应片尾。"
+      ],
+      "note": "9 月 24 日短版竖屏导出。",
+      "chapters": [],
+      "video": "media/pt-muscle-short-f5ff4e24db.mp4",
+      "poster": "media/pt-muscle-short-f5ff4e24db.webp",
+      "duration": 45.672993,
+      "width": 1080,
+      "height": 1920,
+      "prompt": {
+        "updated": "2026-09-18",
+        "parts": 1,
+        "url": "prompts/pt-muscle-short.txt"
+      },
+      "section": "drama"
+    }
+  ],
+  "cases": [
+    {
+      "id": "space",
+      "tab": "白模预演",
+      "number": "01",
+      "eyebrow": "01 / 白模预演 · 空间、镜头与动作",
+      "title": "用白模把镜头和动作先做清楚。",
+      "question": "从文字分镜到可观看的空间预演。",
+      "answer": "在 Blender 中搭建场景、角色体块与摄影机，把站位、移动路线、遮挡和动作节奏放进同一个镜头验证。白模负责空间与时序，美术参考负责外观，再将这些控制信息用于 AI 视频生成。",
+      "video": "exhibits/blockout.mp4",
+      "poster": "exhibits/blockout.webp",
+      "caption": "空间与动作控制 · 白模预演 / AI 成片",
+      "steps": [
+        {
+          "title": "搭建空间与机位",
+          "text": "确定人物、目标和遮挡物的位置，验证取景范围、透视关系与运动路线。"
+        },
+        {
+          "title": "编排连续动作",
+          "text": "将角色位移、身体朝向、局部动作和摄影机运动分开控制，明确动作起点、过程和落点。"
+        },
+        {
+          "title": "对照画面返修",
+          "text": "按对应时间检查白模与生成画面；局部修改限定对象和时间段，保留已确认的镜头与动作。"
+        }
+      ],
+      "learning": "白模的价值在于提前暴露问题。人物太小、遮挡过快、动作重心不稳，都应先修正控制素材，再进入生成。",
+      "tools": [
+        "Blender",
+        "Python",
+        "Seedance 2.5"
+      ],
+      "secondary": "exhibits/art-direction.webp",
+      "secondaryCaption": "环境参考 · 控制环境与光影，动作时序由白模提供",
+      "result": "保留白模、环境参考与生成版本，按同一镜头对照空间关系与动作节奏，定位需要返修的部分。",
+      "comparison": {
+        "layout": "whitebox",
+        "label": "白模与 AI 成片对比",
+        "items": [
+          {
+            "title": "白模预演",
+            "description": "空间 · 机位 · 动作",
+            "video": "exhibits/comparison/s01-blockout.mp4",
+            "poster": "exhibits/comparison/s01-blockout.webp",
+            "width": 360,
+            "height": 640
+          },
+          {
+            "title": "AI 成片",
+            "description": "角色 · 环境 · 光影",
+            "video": "exhibits/comparison/s01-generated.mp4",
+            "poster": "exhibits/comparison/s01-generated.webp",
+            "width": 360,
+            "height": 640
+          }
+        ]
+      }
+    },
+    {
+      "id": "pipeline",
+      "tab": "自动化流程",
+      "number": "02",
+      "eyebrow": "02 / 自动化流程 · 从创作到交付",
+      "title": "把重复制作步骤连接成可复用流程。",
+      "question": "让素材、生成任务与成片版本始终对应。",
+      "answer": "用 GPT / Codex 协作整理剧本与制作要求，结合 Python 执行器与生成接口，连接资产复用、任务提交、进度查询、候选下载、样片转正与成片整理。将重复操作交给流程，把创意取舍与画面审阅保留在制作环节。",
+      "caption": "制作流程 · 资产、任务与版本管理",
+      "steps": [
+        {
+          "title": "资产可追溯",
+          "text": "以文件哈希、账号和工作区核对资产，记录素材用途与参考顺序，减少重传和版本混用。"
+        },
+        {
+          "title": "任务可恢复",
+          "text": "保存实际请求、任务与输出映射；中断后继续查同一任务，失败时先核对原因。"
+        },
+        {
+          "title": "交付可检查",
+          "text": "区分样片与选定版本，保存转正映射；检查下载完整性、分辨率与媒体可读性。"
+        }
+      ],
+      "learning": "适合自动化的是明确、重复的操作。剧本取舍、动作自然度和最终观感需要持续审阅，不能用命令成功代替。",
+      "tools": [
+        "GPT / Codex",
+        "Python",
+        "Seedance 2.5",
+        "FFmpeg / FFprobe"
+      ],
+      "result": "将脚本拆解、资产准备、视频生成与后期合成串联起来，保留版本记录，便于复用和继续制作。",
+      "relatedLink": "#ai-automation",
+      "relatedLabel": "查看自动化成片与制作流程 ↗"
+    },
+    {
+      "id": "ui",
+      "number": "03",
+      "tab": "UI 设计",
+      "boards": [
+        {
+          "title": "射击与升级 UI",
+          "description": "资源状态 · 操作反馈 · 武器选择 · 任务与结算",
+          "video": "exhibits/ui-boards/shooting.mp4",
+          "poster": "exhibits/ui-boards/shooting.webp",
+          "width": 2400,
+          "height": 1800,
+          "image": "exhibits/ui-boards/shooting.png"
+        },
+        {
+          "title": "目标识别与结算 UI",
+          "description": "状态栏 · 目标等级 · 锁定提示 · 消灭与赏金",
+          "video": "exhibits/ui-boards/tactical.mp4",
+          "poster": "exhibits/ui-boards/tactical.webp",
+          "width": 2400,
+          "height": 1800,
+          "image": "exhibits/ui-boards/tactical.png",
+          "loop": true
+        },
+        {
+          "title": "狩猎与改装 UI",
+          "description": "资源状态 · 猎物识别 · 属性成长 · 命中与结算",
+          "video": "exhibits/ui-boards/hunting.mp4",
+          "poster": "exhibits/ui-boards/hunting.webp",
+          "width": 2400,
+          "height": 1800,
+          "image": "exhibits/ui-boards/hunting.png"
+        }
+      ]
+    },
+    {
+      "id": "formats",
+      "tab": "多尺寸拓展",
+      "number": "04",
+      "eyebrow": "04 / 多尺寸拓展 · 从竖屏到横屏",
+      "title": "让同一段动作适配不同画幅。",
+      "question": "用遮罩明确扩展区域，再补全画外空间。",
+      "answer": "将 9:16 原片居中放入 16:9 画布，用灰色遮罩标明两侧待生成区域，再结合场景参考补全画外空间。对照原片检查主体动作、透视和光照，使新增区域与原画面连贯。",
+      "caption": "画幅适配 · 竖屏原片 / 拓展区域 / 横屏成片",
+      "comparison": {
+        "layout": "expand",
+        "label": "9:16 原片、16:9 遮罩与横屏成片对比",
+        "items": [
+          {
+            "title": "9:16 原片",
+            "description": "保留完整动作",
+            "video": "exhibits/comparison/g01-portrait.mp4",
+            "poster": "exhibits/comparison/g01-portrait.webp",
+            "width": 360,
+            "height": 640
+          },
+          {
+            "title": "16:9 遮罩",
+            "description": "灰色标明拓展区域",
+            "video": "exhibits/comparison/g01-mask.mp4",
+            "poster": "exhibits/comparison/g01-mask.webp",
+            "width": 960,
+            "height": 540
+          },
+          {
+            "title": "16:9 成片",
+            "description": "补全两侧空间",
+            "video": "exhibits/comparison/g01-result.mp4",
+            "poster": "exhibits/comparison/g01-result.webp",
+            "width": 960,
+            "height": 540
+          }
+        ]
+      },
+      "steps": [
+        {
+          "title": "设置目标画幅",
+          "text": "原片等比缩放并居中放入横屏画布，以中性灰标明需要补全的两侧区域。"
+        },
+        {
+          "title": "补全场景空间",
+          "text": "结合场景参考与提示词，延展机舱、草地、围栏和远山，保持视角、透视与光线关系。"
+        },
+        {
+          "title": "对照动作连续性",
+          "text": "同时检查原片与扩展结果中的开镜、射击和换弹动作，关注枪械边缘、机舱结构与新增区域的连续性。"
+        }
+      ],
+      "learning": "画幅拓展需要补充可信的空间。先明确原片与扩展区域的边界，再检查动作、透视和光照，比单纯裁切更适合这类机载镜头。",
+      "tools": [
+        "Seedance 2.5"
+      ],
+      "result": "案例展示同一段机载狙击的竖屏原片、实际灰色遮罩输入与已选横屏成片。"
+    },
+    {
+      "id": "restyle",
+      "tab": "风格转绘",
+      "number": "05",
+      "eyebrow": "05 / 风格转绘 · 原片、素体与新美术",
+      "title": "保留镜头与动作，重新设计画面风格。",
+      "question": "让动作参考和美术参考各自负责明确的部分。",
+      "answer": "先将原视频中的人物转成几何素体，减弱原有外观信息，再结合角色、场景与道具参考进行 AI 转绘。原视频用于核对剧情和镜头，白模视频控制站位、动作与时序，美术素材明确新的造型、材质和光影。",
+      "caption": "风格转绘 · 原视频 / 素体参考 / 新美术效果",
+      "comparison": {
+        "layout": "restyle",
+        "label": "原视频、白模视频与转绘后视频对比",
+        "items": [
+          {
+            "title": "原视频",
+            "description": "剧情 · 构图 · 动作节奏",
+            "video": "exhibits/restyle/original.mp4",
+            "poster": "exhibits/restyle/original.webp",
+            "width": 960,
+            "height": 540
+          },
+          {
+            "title": "白模视频",
+            "description": "由原片转制的几何素体参考",
+            "video": "exhibits/restyle/whitebox.mp4",
+            "poster": "exhibits/restyle/whitebox.webp",
+            "width": 960,
+            "height": 540
+          },
+          {
+            "title": "转绘后的视频",
+            "description": "角色造型 · 材质 · 场景光影",
+            "video": "exhibits/restyle/result.mp4",
+            "poster": "exhibits/restyle/result.webp",
+            "width": 960,
+            "height": 540
+          }
+        ]
+      },
+      "steps": [
+        {
+          "title": "从原片提取镜头结构",
+          "text": "梳理镜头顺序、人物站位、朝向、动作和切镜点，将原片转制为几何素体视频，作为后续转绘的动作与构图参考。"
+        },
+        {
+          "title": "分开约束动作与外观",
+          "text": "明确白模只负责空间、镜头与动作时序；角色、场景和道具参考负责新的美术外观，避免把素体颜色、低细节材质或字幕遮挡条带进结果。"
+        },
+        {
+          "title": "三路对照并筛选版本",
+          "text": "同时查看原视频、白模视频和转绘结果，检查人物身份、抱持道具、指向、切镜与入帐篷动作；针对偏差修改相应描述，再比较新一轮结果。"
+        }
+      ],
+      "learning": "素体参考能减弱原片外观的影响，但不会自动保证动作和镜头完全一致。需要明确每份参考的职责，并持续检查表情、道具、遮挡与结尾动作；美术变化和动作保留要分别判断。",
+      "tools": [],
+      "result": "本例白模由原片转制。三路视频按同一播放时间对照，用于观察镜头结构的保留与美术外观的变化。",
+      "prompts": [
+        {
+          "title": "原视频 → 白模 · 提示词",
+          "file": "case-prompts/restyle-whitebox.txt"
+        },
+        {
+          "title": "白模 → 风格转绘 · 提示词",
+          "file": "case-prompts/restyle-redraw.txt"
+        }
+      ]
+    },
+    {
+      "id": "phone",
+      "tab": "手机屏幕替换",
+      "number": "06",
+      "eyebrow": "06 / 手机屏幕替换",
+      "title": "让游戏画面跟随手机进入镜头。",
+      "answer": "从纯色手机屏幕到动态游戏画面：用跟踪合成控制贴合，用 AI 局部编辑完成内容替换。两组仅展示手机片段，可同步播放与拖动对照。",
+      "methods": [
+        {
+          "title": "平面跟踪与屏幕合成",
+          "description": "AE + Mocha：将游戏视频作为独立图层，贴合蓝屏手机的运动与透视。",
+          "steps": [
+            "用 Keylight 抠除蓝色显示区域，保留手机边框与前景遮挡。",
+            "用 Mocha 跟踪屏幕平面，将运动信息用于 Corner Pin 四角定位。",
+            "对齐游戏画面的比例、边缘与播放节奏，检查手机推近时的贴合。"
+          ],
+          "learning": "纯色屏幕便于分离显示区域；跟踪与抠像分别处理运动和遮挡，边缘贴合需要结合手机转动持续检查。",
+          "caption": "平面跟踪合成 · 替换前 / 替换后",
+          "comparison": {
+            "layout": "phone",
+            "label": "平面跟踪与屏幕合成对比",
+            "silent": true,
+            "items": [
+              {
+                "title": "替换前",
+                "description": "纯色屏幕",
+                "video": "exhibits/phone/pt-before.mp4",
+                "poster": "exhibits/phone/pt-before.webp",
+                "width": 540,
+                "height": 960
+              },
+              {
+                "title": "替换后",
+                "description": "游戏画面",
+                "video": "exhibits/phone/pt-after.mp4",
+                "poster": "exhibits/phone/pt-after.webp",
+                "width": 540,
+                "height": 960
+              }
+            ]
+          },
+          "tools": [
+            "After Effects",
+            "Mocha",
+            "Keylight / Corner Pin"
+          ]
+        },
+        {
+          "title": "AI 局部视频编辑",
+          "description": "Seedance 2.5：以手机镜头为编辑母版，以游戏视频为屏幕内容参考，限定绿色显示区域进行替换。",
+          "steps": [
+            "截取手机展示段，并准备静音游戏视频作为屏幕内容。",
+            "明确两份参考的职责：母版控制人物与镜头，游戏视频只控制屏内内容。",
+            "要求内容随手机透视与运动贴合，保留手部遮挡、黑色边框、圆角和刘海。"
+          ],
+          "learning": "把编辑区域、参考职责、播放速度和遮挡关系写清楚。游戏内容从屏幕露出时正常播放，场景声音单独保留。",
+          "caption": "AI 局部编辑 · 替换前 / 替换后",
+          "comparison": {
+            "layout": "phone",
+            "label": "AI 局部视频编辑对比",
+            "silent": true,
+            "items": [
+              {
+                "title": "替换前",
+                "description": "纯色屏幕",
+                "video": "exhibits/phone/samo-before.mp4",
+                "poster": "exhibits/phone/samo-before.webp",
+                "width": 540,
+                "height": 960
+              },
+              {
+                "title": "替换后",
+                "description": "游戏画面",
+                "video": "exhibits/phone/samo-after.mp4",
+                "poster": "exhibits/phone/samo-after.webp",
+                "width": 540,
+                "height": 960
+              }
+            ]
+          },
+          "tools": [
+            "Seedance 2.5"
+          ]
+        }
+      ]
+    }
+  ],
+  "skills": [
+    {
+      "title": "创意与镜头",
+      "output": "脚本、分镜与可执行提示词",
+      "text": "把卖点改写为可见动作与反转，推敲视线、方向、受力、道具状态和跨镜承接。",
+      "tools": "GPT / Codex · 中文制作沟通 · 英语对白"
+    },
+    {
+      "title": "资产与生成",
+      "output": "角色、场景、道具与视频片段",
+      "text": "让参考各自承担身份、外观、构图或动作控制，按问题选择文字修改、参考修正或局部编辑。",
+      "tools": "Seedance 2.5 · Seedream 5.0 Pro · Nano Banana Pro · GPT Image"
+    },
+    {
+      "title": "预演与包装",
+      "output": "白模、透明 UI 与合成预览",
+      "text": "用最小结构验证镜头和动作，再以程序化绘制、蒙版、数值动画与剪辑完成信息反馈。",
+      "tools": "Blender Python · AE / ExtendScript · Node.js / SVG · OpenCV · 剪映"
+    },
+    {
+      "title": "流程与交付",
+      "output": "资产记录、任务映射与媒体检查",
+      "text": "把重复操作写成脚本，保存输入、版本与产出，区分技术检查、创作审阅与选片。",
+      "tools": "Python · FFmpeg / FFprobe · JSON · SHA-256"
+    }
+  ],
+  "rokAutomation": {
+    "intro": "输入脚本与画风，由 GPT / Codex 调度制作规则、生成服务与本地脚本，串联资产准备、视频生成、配音配乐、字幕混音和成片交付。人工负责需求设定、样片选择与最终审核。",
+    "evidence": "本组两条案例：30 秒剧情 + 25 秒 AI 玩法示意，均交付 55 秒、16:9、1080p 整片。后半段为 AI 生成的玩法示意画面。",
+    "overview": [
+      {
+        "title": "01 输入脚本与画风",
+        "text": "确定故事、角色和表现方式"
+      },
+      {
+        "title": "02 自动制作完整预览",
+        "text": "资产 → 生成 → 声音 → 合成"
+      },
+      {
+        "title": "03 人工选定样片",
+        "text": "AI 推荐候选，由我确认版本"
+      },
+      {
+        "title": "04 自动转正与交付",
+        "text": "1080p → 合成 → 检查 → 归档"
+      }
+    ],
+    "steps": [
+      {
+        "title": "读取脚本，拆解制作要求",
+        "text": "读取脚本文字或图片，提取角色、对白、道具和情节因果；结合美术要求与所选画风，编排镜头、动作衔接和时长。本组采用真人与美漫 Q 版两种表现。",
+        "output": "剧情结构、分镜提示词、30 秒剧情与 25 秒玩法示意的时长规划"
+      },
+      {
+        "title": "匹配角色资产，自动补齐缺项",
+        "text": "查找已登记的角色与场景素材，按内容、账号和工作区核对版本后复用。缺少的配角、服装或道具按本片画风补制，筛选后登记，保留参考图与角色用途的对应关系。",
+        "output": "参考资产、素材登记和生成所用的参考顺序"
+      },
+      {
+        "title": "自动提交剧情样片并跟踪任务",
+        "text": "调用 Seedance 2.5，一次生成包含完整剧情的 30 秒样片，每个脚本提供 4 条 480p 候选。自动查询原任务、下载结果并保存版本对应；返修时重新生成受影响的剧情段。",
+        "output": "每条故事的 4 个完整剧情候选与任务记录"
+      },
+      {
+        "title": "制作玩法示意、解说和配乐",
+        "text": "本组案例另行生成 25 秒 AI 玩法示意，独立生成中文解说并提取声音，再用 Lyria 3 Pro 生成配乐。画面、解说与音乐分别保存，便于单独调整。",
+        "output": "玩法示意视频、解说音轨与音乐文件"
+      },
+      {
+        "title": "自动剪接、加字幕并混音",
+        "text": "使用 Python 与 FFmpeg 拼接剧情和玩法示意，对齐字幕时序，处理配乐、人声和片段衔接，输出 55 秒完整预览。玩法段保留“AI玩法示意”标记。",
+        "output": "可直接审看的完整样片与字幕、时间线、混音记录"
+      },
+      {
+        "title": "审看候选，完成一次关键选片",
+        "text": "AI 辅助比较剧情完整性、角色连续性、对白和动作表现，给出推荐及问题说明；由我观看并选定具体版本。",
+        "output": "明确绑定的入选样片，供后续自动转正"
+      },
+      {
+        "title": "自动转为 1080p，合成并检查交付",
+        "text": "按选定样片直接转为 1080p，下载后检查完整性和实际分辨率；重新合成整片，沿用已选预览的混音和字幕时序。检查时长、音轨、字幕与衔接，并保存源片、版本对应和交付记录。",
+        "output": "两条 1920 × 1080、24fps、55 秒完整 MP4 与可追溯制作资料"
+      }
+    ],
+    "responsibility": "将项目美术、参考素材规则、生成参数和交付检查整理成可重复执行的制作流程；提出创作要求、判断候选质量并选择版本。重复的提交、查询、下载、字幕与合成由 AI 和脚本完成，关键创作取舍由我把关。",
+    "tools": [
+      "GPT / Codex",
+      "制作 Skills",
+      "Seedance 2.5",
+      "Seedream 5.0 Pro",
+      "Lyria 3 Pro",
+      "Python / FFmpeg"
+    ]
+  },
+  "assetExamples": [
+    {
+      "title": "图片资产编辑与替换",
+      "text": "以原图控制机位与环境，结合独立道具参考替换指定物件，补全遮挡区域、材质与接触阴影。",
+      "layout": "upgrade",
+      "images": [
+        {
+          "image": "exhibits/image-assets/vt-rifle.webp",
+          "label": "狙击枪母图",
+          "alt": "机舱内座椅与狙击枪改装母图",
+          "width": 720,
+          "height": 1290
+        },
+        {
+          "image": "exhibits/image-assets/vt-single.webp",
+          "label": "单联替换",
+          "alt": "替换为单联机枪、落地底座与弹箱",
+          "width": 720,
+          "height": 1280
+        },
+        {
+          "image": "exhibits/image-assets/vt-dual.webp",
+          "label": "双联替换",
+          "alt": "沿用机舱构图替换为双联机枪",
+          "width": 720,
+          "height": 1280
+        }
+      ],
+      "tools": [
+        "Seedream 5.0 Pro"
+      ]
+    },
+    {
+      "title": "图片资产光影优化",
+      "text": "保留场景布局，减少碎反光与杂乱纹理，调整明暗层次和光照重点，让主体与行动空间更清楚。",
+      "layout": "scene",
+      "images": [
+        {
+          "image": "exhibits/image-assets/w3-before.webp",
+          "label": "优化前",
+          "alt": "去脏前的雨后夜港场景",
+          "width": 1200,
+          "height": 675
+        },
+        {
+          "image": "exhibits/image-assets/w3-after.webp",
+          "label": "优化后",
+          "alt": "减少杂乱反光、整理材质和光影后的夜港",
+          "width": 1200,
+          "height": 675
+        }
+      ],
+      "tools": [
+        "Seedream 5.0 Pro"
+      ]
+    }
+  ],
+  "toolOverview": [
+    {
+      "label": "AI 模型与助手",
+      "items": [
+        "GPT / Codex",
+        "Seedance 2.5",
+        "Seedream 5.0 Pro",
+        "Nano Banana Pro",
+        "GPT Image",
+        "Lyria 3 Pro"
+      ]
+    },
+    {
+      "label": "制作工具",
+      "items": [
+        "Blender",
+        "After Effects",
+        "Premiere Pro",
+        "Mocha",
+        "剪映",
+        "Python",
+        "Node.js",
+        "FFmpeg",
+        "OpenCV"
+      ]
+    }
+  ],
+  "archive": [
+    {
+      "id": "film-05",
+      "title": "搬尸体埋伏",
+      "type": "战地剧情",
+      "orientation": "横屏",
+      "duration": 59.46,
+      "width": 1920,
+      "height": 1080,
+      "summary": "战壕里的紧张躲藏，以人物对话转入游戏画面。",
+      "description": "灰冷的战场、泥土与人物面部特写构成开场。两名士兵在战壕中躲避巡逻，近景对话之后出现手机展示，再衔接射击与战场地图画面。",
+      "highlights": [
+        "近距离人物特写与战壕全景交替，建立人物处境。",
+        "同一组角色贯穿剧情、手机展示与后段解说画面。",
+        "紧张的开场与后段人物表情形成情绪变化。"
+      ],
+      "chapters": [
+        [
+          1.5,
+          "战壕人物特写"
+        ],
+        [
+          16.3,
+          "巡逻与躲藏"
+        ],
+        [
+          31.2,
+          "手机展示与游戏衔接"
+        ]
+      ],
+      "category": "真人 Drama 买量",
+      "featured": true,
+      "game": "ARCHIVE",
+      "date": "早期作品",
+      "poster": "media/film-05.webp",
+      "video": "media/film-05.mp4",
+      "note": "画面说明来自原站作品记录。",
+      "prompt": {
+        "updated": "2026-08-13",
+        "parts": 4,
+        "note": "藏身、敌军检查、起身对白与双人口播提示词；各段时间与参考编号独立。",
+        "url": "prompts/film-05.txt"
+      },
+      "section": "drama"
+    },
+    {
+      "id": "film-03",
+      "title": "神龙反转",
+      "type": "奇幻反转",
+      "orientation": "竖屏",
+      "duration": 57.67,
+      "width": 1080,
+      "height": 1920,
+      "summary": "水晶召唤仪式，以角色对照推进反转。",
+      "description": "城堡广场上的巨大水晶成为视觉中心。不同人物依次召唤生物，经过“三天后”的时间转换，光柱与大型奇幻角色带来反转，结尾接入游戏演示。",
+      "highlights": [
+        "水晶、人物与围观人群形成清晰的中心构图。",
+        "人物反应镜头与召唤全景交替，推进对抗关系。",
+        "光柱、粒子效果与生物尺度变化共同构成视觉转折。"
+      ],
+      "chapters": [
+        [
+          5.0,
+          "广场召唤仪式"
+        ],
+        [
+          26.7,
+          "时间转换后的对照"
+        ],
+        [
+          37.5,
+          "奇幻角色登场"
+        ]
+      ],
+      "category": "真人 Drama 买量",
+      "game": "ARCHIVE",
+      "date": "早期作品",
+      "poster": "media/film-03.webp",
+      "video": "media/film-03.mp4",
+      "note": "画面说明来自原站作品记录。",
+      "prompt": {
+        "updated": "2026-08-19",
+        "parts": 3,
+        "note": "召唤开场与后段反转的提示词；各段时间独立。",
+        "url": "prompts/film-03.txt"
+      },
+      "section": "drama"
+    },
+    {
+      "id": "film-02",
+      "title": "大龟哥",
+      "type": "角色成长",
+      "orientation": "竖屏",
+      "duration": 58.67,
+      "width": 1080,
+      "height": 1920,
+      "summary": "小型龟类角色与巨型形态，形成鲜明尺度反差。",
+      "description": "街头人物展示不同的奇幻伙伴。小型绿色龟类角色先以近景出现，随后切换为高大的龙龟形态；后段进入野外探索和战斗画面。",
+      "highlights": [
+        "写实街景与风格化生物并置。",
+        "面部近景、手持角色与巨型全身镜头形成尺度变化。",
+        "从街头角色关系延伸至野外场景，拓展画面空间。"
+      ],
+      "chapters": [
+        [
+          12.5,
+          "小型角色近景"
+        ],
+        [
+          30.8,
+          "巨型形态登场"
+        ],
+        [
+          38.1,
+          "野外探索画面"
+        ]
+      ],
+      "category": "真人 Drama 买量",
+      "game": "ARCHIVE",
+      "date": "早期作品",
+      "poster": "media/film-02.webp",
+      "video": "media/film-02.mp4",
+      "note": "画面说明来自原站作品记录。",
+      "prompt": {
+        "updated": "2026-08-07",
+        "parts": 6,
+        "note": "街头召唤、受力表演与进化镜头提示词；进化镜头另附机位和比例控制，不含后续野外玩法。",
+        "url": "prompts/film-02.txt"
+      },
+      "section": "drama"
+    },
+    {
+      "id": "film-01",
+      "title": "反转鉴定",
+      "type": "短篇反转",
+      "orientation": "竖屏",
+      "duration": 21.65,
+      "width": 1080,
+      "height": 1920,
+      "summary": "同一鉴定台前，三次揭晓构成短节奏反转。",
+      "description": "人物依次把不同的蛋放到鉴定台上。火焰、烟雾与电光连接不同生物的登场，屏幕上的角色卡和等级标识强化结果差异。",
+      "highlights": [
+        "重复的鉴定台构图，让每轮结果更容易比较。",
+        "火焰、烟雾、电光形成不同的登场方式。",
+        "最后一次揭晓以手部特写和金色角色完成反转。"
+      ],
+      "chapters": [
+        [
+          1.9,
+          "火焰登场"
+        ],
+        [
+          7.3,
+          "第二轮鉴定"
+        ],
+        [
+          15.4,
+          "电光与最终揭晓"
+        ]
+      ],
+      "category": "真人 Drama 买量",
+      "game": "ARCHIVE",
+      "date": "早期作品",
+      "poster": "media/film-01.webp",
+      "video": "media/film-01.mp4",
+      "note": "画面说明来自原站作品记录。",
+      "prompt": {
+        "updated": "2026-07-21",
+        "parts": 2,
+        "note": "破蛋悬念与揭晓段提示词；各段时间独立。",
+        "url": "prompts/film-01.txt"
+      },
+      "section": "drama"
+    },
+    {
+      "id": "film-07",
+      "title": "生死狙击",
+      "type": "双人剧情",
+      "orientation": "横屏",
+      "duration": 44.44,
+      "width": 1920,
+      "height": 1080,
+      "summary": "荒野潜伏中的双人对话，连接狙击与战场演示。",
+      "description": "两名身穿伪装服的角色伏在山地，望远镜与瞄准动作建立任务情境。人物近景、手机画面与游戏镜头相互衔接，末段回到双人同框。",
+      "highlights": [
+        "山地全景、观察镜头和面部特写建立视线关系。",
+        "两名角色的不同反应构成对话节奏。",
+        "剧情人物叠加到游戏画面中，保持内容衔接。"
+      ],
+      "chapters": [
+        [
+          1.1,
+          "山地潜伏"
+        ],
+        [
+          12.2,
+          "手机作为转场线索"
+        ],
+        [
+          31.7,
+          "回到双人同框"
+        ]
+      ],
+      "category": "真人 Drama 买量",
+      "game": "ARCHIVE",
+      "date": "早期作品",
+      "poster": "media/film-07.webp",
+      "video": "media/film-07.mp4",
+      "note": "画面说明来自原站作品记录。",
+      "prompt": {
+        "updated": "2026-07-13",
+        "parts": 4,
+        "note": "四段剧情提示词；各段时间与参考编号独立。",
+        "url": "prompts/film-07.txt"
+      },
+      "section": "drama"
+    },
+    {
+      "id": "film-06",
+      "title": "比较子弹",
+      "type": "演示叙事",
+      "orientation": "竖屏",
+      "duration": 59.22,
+      "width": 1080,
+      "height": 1920,
+      "summary": "靶场测试与结果特写，把比较关系讲清楚。",
+      "description": "沙漠靶场内，人物展示弹药并进行射击演示。镜头在人物、枪械与金属靶的受击痕迹之间切换，随后通过手机展示衔接游戏画面。",
+      "highlights": [
+        "展示、射击、结果特写构成可辨认的重复结构。",
+        "同一金属靶上的不同痕迹提供视觉比较。",
+        "人物解说画面延续到游戏演示阶段。"
+      ],
+      "chapters": [
+        [
+          5.2,
+          "弹药展示"
+        ],
+        [
+          16.3,
+          "金属靶结果特写"
+        ],
+        [
+          31.1,
+          "手机展示与演示衔接"
+        ]
+      ],
+      "category": "真人 Drama 买量",
+      "game": "ARCHIVE",
+      "date": "早期作品",
+      "poster": "media/film-06.webp",
+      "video": "media/film-06.mp4",
+      "note": "画面说明来自原站作品记录。",
+      "prompt": {
+        "updated": "2026-07-29",
+        "parts": 5,
+        "note": "五段剧情提示词；各段参考素材编号独立。",
+        "url": "prompts/film-06.txt"
+      },
+      "section": "drama"
+    },
+    {
+      "id": "film-08",
+      "title": "超人逆袭",
+      "type": "夸张开场",
+      "orientation": "竖屏",
+      "duration": 54.01,
+      "width": 1080,
+      "height": 1920,
+      "summary": "披风角色的反差开场，切入第一人称游戏画面。",
+      "description": "开场以体型、服饰和等级标识制造角色反差。披风人物与对手在街头对峙，后段转换为狙击视角，依次出现瞄准、射击与爆炸画面。",
+      "highlights": [
+        "等级标识与人物外形共同建立强弱对照。",
+        "人物反应近景强化开场的夸张感。",
+        "由人物段落切换到第一人称视角，改变观看节奏。"
+      ],
+      "chapters": [
+        [
+          4.7,
+          "披风角色登场"
+        ],
+        [
+          11.5,
+          "街头人物对峙"
+        ],
+        [
+          28.4,
+          "第一人称狙击画面"
+        ]
+      ],
+      "category": "真人 Drama 买量",
+      "game": "ARCHIVE",
+      "date": "早期作品",
+      "poster": "media/film-08.webp",
+      "video": "media/film-08.mp4",
+      "note": "画面说明来自原站作品记录。",
+      "prompt": {
+        "updated": "2026-09-01",
+        "parts": 2,
+        "note": "角色替换与开场动作控制的提示词，不含后续游戏画面。",
+        "url": "prompts/film-08.txt"
+      },
+      "section": "drama"
+    },
+    {
+      "id": "film-04",
+      "title": "押大押小",
+      "type": "动作视角",
+      "orientation": "竖屏",
+      "duration": 59.29,
+      "width": 1080,
+      "height": 1920,
+      "summary": "峡谷、港口与雪地之间，连续展开第一人称动作。",
+      "description": "第一人称持枪与瞄准镜视角贯穿主要段落。镜头从峡谷切换到城市、夜间港口与雪地，激光、爆炸及环境变化提供连续的视觉刺激。",
+      "highlights": [
+        "持枪视角与瞄准镜特写交替，形成重复观看节奏。",
+        "日景、夜景与雪地场景呈现不同的光线和色彩。",
+        "场景变化保持同一动作视角，串联多个演示段落。"
+      ],
+      "chapters": [
+        [
+          5.2,
+          "峡谷瞄准"
+        ],
+        [
+          31.1,
+          "夜间港口"
+        ],
+        [
+          49.7,
+          "雪地射击"
+        ]
+      ],
+      "category": "AI-3D",
+      "game": "ARCHIVE",
+      "date": "早期作品",
+      "poster": "media/film-04.webp",
+      "video": "media/film-04.mp4",
+      "note": "画面说明来自原站作品记录。",
+      "prompt": {
+        "updated": "2026-09-03",
+        "parts": 4,
+        "note": "四个场景的提示词，不含雪地段；各段时间与参考编号独立。",
+        "url": "prompts/film-04.txt"
+      },
+      "section": "ai-3d"
+    }
+  ]
+}
